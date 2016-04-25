@@ -1,0 +1,51 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header_login.html" %}
+
+<div class = "row">
+	<div class = "col-md-2">
+	</div>
+	<div class = "col-md-8">
+	<h1> Edit App {{app.name}} </h1>
+
+<form action = "#" method = "post">
+		<div class = "form-group">
+			<label for ='name'> Name: </label>
+			<input type = "text" maxlength = "50" class = "form-control" name = "name" value = "{{app.name}}">
+
+			<label for ='developer'> Developer:</label>
+			<input type = "text" maxlength = "50" class = "form-control" name = "developer" value = "{{app.developer}}">
+
+			<label for="description">Description:</label>
+			<textarea class="form-control" maxlength="250" rows="3" name="description">{{app.description}}</textarea>
+
+			<label for ='website'> Website: </label>
+			<input type = "text" maxlength = "80" class = "form-control" name = "website" value = "{{app.website}}">
+
+			<label for ='website'> Price: </label>
+			<input type = "text" maxlength = "80" class = "form-control" name = "price" value = "{{app.price}}">
+
+  			<label for="category_id">Select a Category:</label>
+  			<select class="form-control" name = "category_id" value = "{{app.category_id}}">
+    			<option value = 3 >Education</option>
+    			<option value = 5 >Game</option>
+				<option value = 2 >Interactive Story</option>
+    			<option value = 4 >Simulation</option>
+    			<option value = 1 >Virtual Tour</option>
+  			</select>
+  			<div align = "middle">
+  			  <a href ="{{url_for('showAppDetails', category_name = category.name, app_name = app.name)}}">Cancel</a> <span>
+  			<button type="submit" class="btn large">Save</button></span>
+  		</div>
+  	</div>
+  	</form>
+ </div>
+ <div class = "col-md-2">
+ </div>
+</div>
+
+
+
+
+{% endblock %}
+

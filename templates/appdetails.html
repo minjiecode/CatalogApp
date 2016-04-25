@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header_login.html" %}
+
+<div class = "row">
+	<div class = 'col-md-3'></div>
+
+<div class = "col-md-6">
+	<h2> {{app.name}} </h2>
+	<p> Developer: {{app.developer}}</p>
+	<p> Website: <a href = "{{app.website}}">{{app.website}}</a></p>
+	<p> Description: {{app.description}}</p>
+	<p> Price: {{app.price}}
+	<div align = "left">
+		<button class = 'btn' onclick ="location.href='{{url_for('editApp', category_name = category.name, app_name = app.name)}}'"> EDIT </button>
+		<button class = 'btn' style = "background-color:#D50000" onclick = "location.href='{{url_for('deleteApp', category_name = category.name, app_name = app.name)}}'"> DELETE </button>
+	</div>
+	<h3><a href="{{url_for('showApp', category_name = category.name)}}">Go to the {{category.name}}</a></h3>
+
+</div>
+
+
+
+<div class = 'col-md-3'></div>
+
+
+{% endblock %}
