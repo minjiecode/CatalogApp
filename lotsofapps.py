@@ -101,7 +101,7 @@ category4 = Category(name = "Simulation")
 session.add(category4)
 session.commit()
 
-app1 = App(user_id=4, name="Flying Aces VR", developer = "Ben Librojo", description="Flying Aces VR is a flight sim/combat game set during World War 1. Take to the skies and experience the birth and rise of aerial combat during the Great War (1914-1918). Develop and test your piloting, gunning and bombing skills in structured missions, and lead your side to victory from above!", price="Free", website ="http://www.vr-gameplay.com/", category=category4)
+app1 = App(user_id=4, name="Flying Aces VR", developer = "Ben Librojo", description="Flying Aces VR is a flight sim/combat game set during World War 1. ", price="Free", website ="http://www.vr-gameplay.com/", category=category4)
 
 session.add(app1)
 session.commit()
@@ -114,7 +114,7 @@ category5 = Category(name = "Game")
 session.add(category5)
 session.commit()
 
-app1 = App(user_id=4, name="Casino VR: Poker (Beta)", developer = "Casino VR Ltd.", description="Casino VR: Poker (Beta) is a free multiplayer poker game with realistic avatars, body movement and spatial voice chat. The game is currently running as a Beta. See your avatar come to life as the game mirrors your real life head movements in VR, hear people smack talk as they try to bluff each other to win the game.", price="Free", website ="http://www.casino-vr.com/", category=category5)
+app1 = App(user_id=4, name="Casino VR: Poker (Beta)", developer = "Casino VR Ltd.", description="Casino VR: Poker (Beta) is a free multiplayer poker game with realistic avatars, body movement and spatial voice chat.", price="Free", website ="http://www.casino-vr.com/", category=category5)
 
 
 session.add(app1)
