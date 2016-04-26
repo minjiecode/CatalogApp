@@ -8,7 +8,7 @@ import string
 
 # Connect to Database and create database session
 
-engine = create_engine('sqlite:///vrappswithusers.db')
+engine = create_engine('postgresql://catalog:catalog@localhost/catalog')
 Base.metadata.bind = engine
 
 
