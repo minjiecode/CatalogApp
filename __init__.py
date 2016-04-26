@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 
 CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+    open(r'/var/www/CatalogApp/client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Discover Virtual Reality Apps"
 
 
@@ -107,7 +107,7 @@ def gconnect():
 
     try:
         # Upgrade the authorization code into a credentials object
-        oauth_flow = flow_from_clientsecrets('client_secrets.json', scope='')
+        oauth_flow = flow_from_clientsecrets(r'/var/www/ItemCatalog/client_secrets.json', scope='')
         oauth_flow.redirect_uri = 'postmessage'
         credentials = oauth_flow.step2_exchange(code)
 
