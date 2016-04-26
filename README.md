@@ -17,6 +17,8 @@ HTTP (port 80), and NTP (port 123)
 
 The local timezone is configured to UTC.
 
+Used .htaccess to make .git file not publicly accessible.
+
 
 ####Software Installed:
 - Ubuntu trusty64
