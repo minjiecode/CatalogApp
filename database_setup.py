@@ -40,7 +40,7 @@ class App(Base):
     name =Column(String(80), nullable = False)
     id = Column(Integer, primary_key = True)
     developer = Column(String(80), nullable = False)
-    description = Column(String(250))
+    description = Column(String(500))
     price = Column(String(80))
     website = Column(String(250))
     category_id = Column(Integer,ForeignKey('category.id'))
